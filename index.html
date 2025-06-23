@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arpita Singh | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,6 +12,11 @@
       padding: 0;
       background-color: #f7f9fc;
       color: #333;
+      transition: background-color 0.4s, color 0.4s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
     }
     header {
       background-color: #2f80ed;
@@ -27,6 +33,13 @@
       text-decoration: none;
       color: #2f80ed;
       font-weight: bold;
+    }
+    .toggle-darkmode {
+      cursor: pointer;
+      margin-left: 15px;
+      background: none;
+      border: none;
+      font-size: 16px;
     }
     section {
       padding: 2rem;
@@ -56,6 +69,13 @@
       border-radius: 5px;
       font-size: 14px;
     }
+    blockquote {
+      background: #f9f9f9;
+      border-left: 4px solid #2f80ed;
+      margin: 1rem 0;
+      padding: 1rem;
+      font-style: italic;
+    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -65,89 +85,54 @@
   </style>
 </head>
 <body>
-  <header>
-     <img src="apic.png" alt="Arpita Singh" style="width:120px; border-radius: 50%; margin-bottom: 1rem;">
+  <header data-aos="fade-down">
+    <img src="apic.png" alt="Arpita Singh" style="width:140px; height:140px; object-fit: cover; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.2); border: 3px solid #ffffff; margin-bottom: 1rem;">
     <h1>Arpita Singh</h1>
     <p>Aspiring Software Developer & Data Analyst</p>
+    <button class="toggle-darkmode" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
   </header>
 
-  <nav>
+  <nav data-aos="fade-up">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
     <a href="#publication">Publication</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#goals">Goals</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>Hello! I'm Arpita, currently building my career as a Software Developer and Data Analyst. I love exploring backend development, creating real-world projects, and visualizing data to solve meaningful problems.</p>
+    <p>Hello! I'm Arpita, currently pursuing a B.Tech in Computer Science. I'm passionate about backend development, full-stack web apps, and data analytics. I enjoy learning new technologies, building scalable solutions, and solving real-world problems. My portfolio reflects my consistent progress and practical skills gained through internships, research work, and project development.</p>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Mail Archiver System</h3>
-      <p>Engineered a secure email archiving platform enabling shared access for sending and receiving emails. Enhanced authentication protocols and encryption algorithms to ensure data privacy and compliance with security. Built using .NET C#, MySQL, HTML, CSS, JavaScript.</p>
-      <a href="https://github.com/arpitasingh31/Mail-Archiever.git" target="_blank">View Code</a>
-    </div>
-    <div class="project">
-      <h3>Blog Website</h3>
-      <p>Analyzed user requirements to develop a secure blog platform implementing authentication, testing features, and full-cycle deployment under SDLC. Users can register, log in, and post blogs securely. Built with PHP, HTML, CSS, JavaScript, MySQL.</p>
-      <a href="https://github.com/arpitasingh31/Responsive-Blogsite-" target="_blank">View Code</a>
-    </div>
-    <div class="project">
-      <h3>Phishing Website Detection</h3>
-      <p>Processed and analyzed datasets using Pandas and NumPy to extract predictive features from URLs. Integrated a trained model (Logistic Regression, Random Forest) into a Flask-based web application for real-time phishing detection. Built using Python, Flask, and Scikit-learn.</p>
-      <a href="https://github.com/arpitasingh31/Phishing-Web-Sites-Detection-.git" target="_blank">View Code</a>
-    </div>
-    <div class="project">
-      <h3>EYE Webinar – Real-Time Communication Platform</h3>
-      <p>Enhanced a real-time video conferencing application with live chat and screen-sharing features using React.js, Node.js, Express.js, MongoDB, WebRTC, AWS. Implemented JWT authentication and OAuth, improving server response time by 40%.</p>
-    </div>
-    <div class="project">
-      <h3>Hotel Management System</h3>
-      <p>Developed a hotel management web application to streamline booking, check-in, and billing operations. Features include admin authentication, room availability tracking, customer registration, and auto-generated invoices. Technologies used include PHP, MySQL, HTML, CSS, and JavaScript.</p>
-    </div>
-    <div class="project">
-      <h3>Daily Dev Blog</h3>
-      <p>Set up and customized a personal blog using GitHub Pages and Jekyll to document daily learning in software development and data analytics. Topics include Python, Django, SQL, and project development logs. Each post is written in Markdown with code snippets and visuals.</p>
-      <a href="https://arpitasingh31.github.io" target="_blank">View Blog</a>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
+  <section id="achievements" data-aos="fade-right">
+    <h2>Achievements</h2>
     <ul>
-      <li>Languages: Java, C#, Python, PHP, JavaScript, SQL</li>
-      <li>Web: HTML, CSS, Bootstrap, ASP.NET Core, Django, React.js</li>
-      <li>Frameworks: .NET, Spring Boot, MERN, Flask</li>
-      <li>Tools: Git, GitHub, Maven, Excel, Power BI, VS Code</li>
-      <li>Databases: MySQL, Oracle, SQL Server, SQLite</li>
+      <li>Campus Ambassador – Learn Vern, Acmegrade</li>
+      <li>Top 2000 Rank in AINCAT 2025 (Aptitude Challenge)</li>
+      <li>Certificate of Appreciation – WhiteHat Jr Coding Camp</li>
+      <li>Received job offers from VVDN Technologies & Arcane Programming Infotech</li>
     </ul>
   </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Python Developer – Learn Vern</li>
-      <li>.NET Developer – BTPS Kanpur</li>
-      <li>TCS iON Career Edge & MasterCraft DataPlus</li>
-      <li>Build Face Recognition using Python – GUVI</li>
-      <li>Gen AI Powered Data Analytics – Tata Forage</li>
-    </ul>
+  <section id="goals" data-aos="fade-left">
+    <h2>My Career Vision</h2>
+    <p>I aspire to become a full-stack developer with strong capabilities in system design and database architecture. I also aim to specialize in data analytics and business intelligence, achieving certifications in Azure, Power BI, and contributing to open-source platforms. I want to work on meaningful tech products that bring value to society.</p>
   </section>
 
-  <section id="publication">
-    <h2>Research & Publication</h2>
-    <p><strong>Title:</strong> EYE Webinar – A Web-Based Communication Platform for Remote Education<br>
-    <strong>Journal:</strong> IJRASET, May 2025<br>
-    <strong>Role:</strong> Third Author (UI/UX, experiments, writing)<br>
-    <strong>Link:</strong> <a href="https://doi.org/10.22214/ijraset.2025.71621" target="_blank">Read Publication</a></p>
+  <section id="testimonials" data-aos="zoom-in">
+    <h2>Testimonials</h2>
+    <blockquote>
+      “Arpita was quick to adapt and brought strong development insight to our team. Her hotel system project stood out for structure and UI.”
+      <footer>— Mentor, Oasis Infobyte Internship</footer>
+    </blockquote>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Email: arpitasi3332@gmail.com</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/arpita-singh-932545202/" target="_blank">linkedin.com/in/arpita-singh</a></p>
@@ -156,8 +141,17 @@
     <p><a href="./Arpita_Singh_Infosys.pdf" download>📄 Download Resume (PDF)</a></p>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>© 2025 Arpita Singh. All rights reserved.</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
