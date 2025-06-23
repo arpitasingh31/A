@@ -1,157 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arpita Singh | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f9fc;
-      color: #333;
-      transition: background-color 0.4s, color 0.4s;
-    }
-    body.dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-    header {
-      background-color: #2f80ed;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #2f80ed;
-      font-weight: bold;
-    }
-    .toggle-darkmode {
-      cursor: pointer;
-      margin-left: 15px;
-      background: none;
-      border: none;
-      font-size: 16px;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #2f80ed;
-    }
-    .project {
-      margin-bottom: 2rem;
-    }
-    .project h3 {
-      margin-bottom: 0.5rem;
-    }
-    .project a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      margin-right: 10px;
-      text-decoration: none;
-      color: white;
-      background-color: #2f80ed;
-      padding: 6px 12px;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-    blockquote {
-      background: #f9f9f9;
-      border-left: 4px solid #2f80ed;
-      margin: 1rem 0;
-      padding: 1rem;
-      font-style: italic;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f0f0f0;
-      margin-top: 3rem;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Arpita Singh - Portfolio</title>
+  <meta content="Arpita Singh's personal portfolio" name="description">
+  <meta content="portfolio, web developer, Arpita Singh, projects, resume" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
+
 <body>
-  <header data-aos="fade-down">
-    <img src="apic.png" alt="Arpita Singh" style="width:140px; height:140px; object-fit: cover; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.2); border: 3px solid #ffffff; margin-bottom: 1rem;">
-    <h1>Arpita Singh</h1>
-    <p>Aspiring Software Developer & Data Analyst</p>
-    <button class="toggle-darkmode" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+  <header id="header" class="header dark-background d-flex flex-column">
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="Arpita Singh" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Arpita Singh</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://github.com/arpitasingh31" class="github"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/arpita-singh-932545202" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav data-aos="fade-up">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#publication">Publication</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#goals">Goals</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main class="main">
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg.jpg" alt="Background" class="">
+      <div class="container" data-aos="fade-up">
+        <h2>Arpita Singh</h2>
+        <p>I'm a <span class="typed" data-typed-items="Web Developer, Full Stack Developer, Tech Enthusiast"></span></p>
+      </div>
+    </section>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>Hello! I'm Arpita, currently pursuing a B.Tech in Computer Science. I'm passionate about backend development, full-stack web apps, and data analytics. I enjoy learning new technologies, building scalable solutions, and solving real-world problems. My portfolio reflects my consistent progress and practical skills gained through internships, research work, and project development.</p>
-  </section>
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Full Stack Developer & Tech Enthusiast</h2>
+            <p class="fst-italic">Passionate about building real-world projects and learning new technologies.</p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><strong>Phone:</strong> <span>+91 9554682098</span></li>
+                  <li><strong>City:</strong> <span>Rae Bareli, India</span></li>
+                  <li><strong>Website:</strong> <span>https://github.com/arpitasingh31</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><strong>Degree:</strong> <span>B.Tech (Computer Science)</span></li>
+                  <li><strong>Email:</strong> <span>arpitasi3332@gmail.com</span></li>
+                  <li><strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>I am currently pursuing B.Tech in Computer Science from Feroze Gandhi Institute Of Engineering and Technology. With multiple internships and project experience, I love exploring Full Stack Development, Machine Learning, and solving real-world challenges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="achievements" data-aos="fade-right">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Campus Ambassador – Learn Vern, Acmegrade</li>
-      <li>Top 2000 Rank in AINCAT 2025 (Aptitude Challenge)</li>
-      <li>Certificate of Appreciation – WhiteHat Jr Coding Camp</li>
-      <li>Received job offers from VVDN Technologies & Arcane Programming Infotech</li>
-    </ul>
-  </section>
+    <section id="skills" class="skills section">
+      <div class="container" data-aos="fade-up">
+        <h2>Skills</h2>
+        <div class="row skills-content">
+          <div class="col-lg-6">
+            <div class="progress"><span class="skill">HTML, CSS, Bootstrap <i class="val">90%</i></span><div class="progress-bar" role="progressbar" style="width:90%"></div></div>
+            <div class="progress"><span class="skill">JavaScript, MERN Stack <i class="val">85%</i></span><div class="progress-bar" role="progressbar" style="width:85%"></div></div>
+            <div class="progress"><span class="skill">Python, PHP, SQL <i class="val">80%</i></span><div class="progress-bar" role="progressbar" style="width:80%"></div></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="progress"><span class="skill">Machine Learning, AI <i class="val">70%</i></span><div class="progress-bar" role="progressbar" style="width:70%"></div></div>
+            <div class="progress"><span class="skill">Advanced Excel, VBA <i class="val">75%</i></span><div class="progress-bar" role="progressbar" style="width:75%"></div></div>
+            <div class="progress"><span class="skill">SEO, YouTube Management <i class="val">80%</i></span><div class="progress-bar" role="progressbar" style="width:80%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="goals" data-aos="fade-left">
-    <h2>My Career Vision</h2>
-    <p>I aspire to become a full-stack developer with strong capabilities in system design and database architecture. I also aim to specialize in data analytics and business intelligence, achieving certifications in Azure, Power BI, and contributing to open-source platforms. I want to work on meaningful tech products that bring value to society.</p>
-  </section>
+    <section id="resume" class="resume section">
+      <div class="container" data-aos="fade-up">
+        <h2>Resume</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>B.Tech in Computer Science</h4>
+              <h5>2022 - 2025</h5>
+              <p>Feroze Gandhi Institute Of Engineering and Technology, 71%</p>
+            </div>
+            <div class="resume-item">
+              <h4>Diploma in CSE</h4>
+              <h5>2019 - 2022</h5>
+              <p>Govt. Girls Polytechnic Meza Prayagraj, 79.10%</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Web Developer Intern</h4>
+              <h5>2022</h5>
+              <p>Arcane Programming Infotech - Real-time projects in PHP and Full Stack Development</p>
+            </div>
+            <div class="resume-item">
+              <h4>Marketing & Business Development Intern</h4>
+              <h5>2021</h5>
+              <p>Digifuse - Developed business proposals and market research</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="testimonials" data-aos="zoom-in">
-    <h2>Testimonials</h2>
-    <blockquote>
-      “Arpita was quick to adapt and brought strong development insight to our team. Her hotel system project stood out for structure and UI.”
-      <footer>— Mentor, Oasis Infobyte Internship</footer>
-    </blockquote>
-  </section>
+    <section id="portfolio" class="portfolio section">
+      <div class="container" data-aos="fade-up">
+        <h2>Projects</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <h4>Mail Archiver</h4>
+            <p>Email system with personalized mail handling. <a href="https://github.com/arpitasingh31/Projects-2.git">View Project</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h4>Responsive Blog Site</h4>
+            <p>Educational blogging platform with future enhancements. <a href="https://github.com/arpitasingh31/Responsive-Blogsite-.git">View Project</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Email: arpitasi3332@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/arpita-singh-932545202/" target="_blank">linkedin.com/in/arpita-singh</a></p>
-    <p>GitHub: <a href="https://github.com/arpitasingh31" target="_blank">github.com/arpitasingh31</a></p>
-    <p>Blog: <a href="https://arpitasingh31.github.io" target="_blank">arpitasingh31.github.io</a></p>
-    <p><a href="./Arpita_Singh_Infosys.pdf" download>📄 Download Resume (PDF)</a></p>
-  </section>
-
-  <footer data-aos="fade-up">
-    <p>© 2025 Arpita Singh. All rights reserved.</p>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
+    <section id="contact" class="contact section">
+      <div class="container" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <p>Email: arpitasi3332@gmail.com | Phone: +91 9554682098</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
+
